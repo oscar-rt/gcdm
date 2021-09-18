@@ -58,7 +58,7 @@ def get_distance(i, j):
 
 
 scData_m = loadmat('../TestData/Cancer/breast_cancer_5000.mat')
-data = scData_m['A']
+data = scData_m['A'] # Format should be: n_cells x m_genes
 
 rho = compute_spearman(data.T)
 rho = process_corr_matrix_using_adjacency_matrix(rho, 0.37)
